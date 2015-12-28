@@ -3,7 +3,7 @@
 #include "Commands/Drive Base/TeleOpTankDrive.h"
 #include "Commands/Drive Base/TeleOpArcadeDrive.h"
 #include "Commands/Drive Base/TeleOpMecanumDrive.h"
-#include "Commands/Autonomous/Very Simple Auto/AutoDriveStraightOverTime.h"
+#include "Commands/Autonomous/Very Simple Auto/VerySimpleAuto.h"
 
 const char inputShape[255] = {0,1,3,4,5,6,7,9,10,11,12,13,15,16,17,18,19,21,22,23,24,25,27,28,29,30,31,
  	        33,34,35,36,37,38,40,41,42,43,44,46,47,48,49,50,52,53,54,55,56,58,59,60,61,62,
@@ -38,7 +38,7 @@ OI::OI(){
 	prefs = Preferences::GetInstance();
 
 	//adding buttons to the SmartDashboard to test them
-	SmartDashboard::PutData("Very Simple Auto", new AutoDriveStraightOverTime());
+	SmartDashboard::PutData("Very Simple Auto", new VerySimpleAuto());
 	SmartDashboard::PutData("TeleOpTankDrive", new TeleOpTankDrive());
 	SmartDashboard::PutData("TeleOpMecanumDrive", new TeleOpMecanumDrive());
 	SmartDashboard::PutData("TeleOpArcadeDrive", new TeleOpArcadeDrive());

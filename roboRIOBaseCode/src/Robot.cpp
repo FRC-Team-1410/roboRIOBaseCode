@@ -1,7 +1,7 @@
 #include "WPILib.h"
 #include "Robot.h"
 
-#include "Commands/Autonomous/Very Simple Auto/AutoDriveStraightOverTime.h"
+#include "Commands/Autonomous/Very Simple Auto/VerySimpleAuto.h"
 OI * Robot::oi = NULL;
 DriveBase * Robot::drivebase = NULL;
 
@@ -12,7 +12,7 @@ void Robot::RobotInit(){
 	lw = LiveWindow::GetInstance();
 
 	auto_choice = new SendableChooser();
-	auto_choice->AddDefault("Very Simple Auto", new AutoDriveStraightOverTime());
+	auto_choice->AddDefault("Very Simple Auto", new VerySimpleAuto());
 	SmartDashboard::PutData("Autonomous Mode", auto_choice);
 }
 

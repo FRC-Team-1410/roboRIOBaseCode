@@ -16,7 +16,7 @@ DriveBase::DriveBase() : Subsystem("DriveBase"){
 	drive_gyro = new Gyro(0);
 
 	//might not work with CAN
-	drive = new RobotDrive(1, 3, 2, 4);
+	drive = new RobotDrive(fl_motor, bl_motor, fr_motor, br_motor);
 
 	drive->SetInvertedMotor(drive->kFrontRightMotor, true);
 	drive->SetInvertedMotor(drive->kRearRightMotor, true);
@@ -65,7 +65,7 @@ void DriveBase::DriveTank(float left_speed, float right_speed, int number_motors
 void DriveBase::DriveArcade(float speed, float rotation, int number_motors){
 	if(number_motors == 2){
 		//might not work with CAN
-		drive = new RobotDrive(1, 2);
+		drive = new RobotDrive(fl_motor, fr_motor);
 
 		drive->SetInvertedMotor(drive->kFrontRightMotor, true);
 

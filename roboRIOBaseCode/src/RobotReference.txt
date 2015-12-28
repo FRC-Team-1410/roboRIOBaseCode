@@ -1,0 +1,20 @@
+Robot Preferences:
+	NumberMotors 4 int (2, 4, 6)
+	DriveMode 1 int (1 = tank, 2 = arcade, 3 = mecanum)
+	DriveMultiplier 1 float (anything between 0 and 1)
+	AutoDriveTime 2.0 float (any number)
+	AutoDriveSpeed 0.5 float (anything between 0 and 1)
+
+List of Subsystems:
+	Drive Base
+	
+List of Commands:
+	Autonomous (folder)
+		Very Simple Auto (folder)
+			VerySimpleAuto (command group)
+				VerySimpleAuto (folder)
+					AutoDriveStraightOverTime (command)
+	Drive Base (folder)
+		TeleOpArcadeDrive (command)
+		TeleOpMecanumDrive (command)
+		TeleOpTankDrive (command)

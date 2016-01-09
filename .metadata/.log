@@ -3782,3 +3782,464 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 !MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.cdt.internal.core.model.CContainer
 !SUBENTRY 1 org.eclipse.core.expressions 4 201 2015-12-28 13:34:22.444
 !MESSAGE No property tester contributes a property org.eclipse.core.resources.projectNature to type class org.eclipse.cdt.internal.core.model.CContainer
+!SESSION 2016-01-06 14:39:52.471 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-01-06 14:42:46.090
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-01-06 14:42:46.340
+!MESSAGE Error: Cannot run program "g++": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "g++": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-01-06 14:42:47.548
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Ashsp'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.ds 2 0 2016-01-06 14:42:55.767
+!MESSAGE Getting a lock required more than 10000 ms. There might be a synchronization problem in this callstack or just the build/dispose process of some components took too long! 
+!STACK 0
+java.lang.Exception: Debug stacktrace
+	at org.eclipse.equinox.internal.ds.InstanceProcess.getLock(InstanceProcess.java:120)
+	at org.eclipse.equinox.internal.ds.InstanceProcess.buildComponent(InstanceProcess.java:560)
+	at org.eclipse.equinox.internal.ds.ServiceReg.getService(ServiceReg.java:53)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse$1.run(ServiceFactoryUse.java:212)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.factoryGetService(ServiceFactoryUse.java:210)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceFactoryUse.getService(ServiceFactoryUse.java:111)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceConsumer$2.getService(ServiceConsumer.java:45)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.getService(ServiceRegistrationImpl.java:496)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.getService(ServiceRegistry.java:461)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.getService(BundleContextImpl.java:619)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.addingService(ProvisioningAgent.java:159)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:941)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.trackInitial(AbstractTracked.java:183)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:318)
+	at org.osgi.util.tracker.ServiceTracker.open(ServiceTracker.java:261)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:66)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.<clinit>(SetupCoreUtil.java:93)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:369)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$3(SetupUIPlugin.java:310)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:210)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-06 14:42:58.709
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-06 14:42:58.721
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-06 14:42:58.752
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-06 14:42:58.768
+!MESSAGE Installedcpp
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 14:52:17.621
+!MESSAGE Running ant file: C:\Users\Ashsp\Documents\GitHub\roboRIOBaseCode\roboRIOBaseCode\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 14:52:17.627
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 14:53:50.861
+!MESSAGE Running ant file: C:\Users\Ashsp\Documents\GitHub\roboRIOBaseCode\roboRIOBaseCode\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 14:53:50.865
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 14:57:35.809
+!MESSAGE Running ant file: C:\Users\Ashsp\Documents\GitHub\roboRIOBaseCode\roboRIOBaseCode\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 14:57:35.816
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:04:50.449
+!MESSAGE Running ant file: C:\Users\Ashsp\Documents\GitHub\roboRIOBaseCode\roboRIOBaseCode\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:04:50.456
+!MESSAGE Targets: deploy, Mode: run
+!SESSION 2016-01-06 15:19:03.524 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-01-06 15:19:16.318
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-01-06 15:19:45.267
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-01-06 15:19:46.286
+!MESSAGE Error: Cannot run program "g++": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "g++": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-06 15:19:48.365
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-06 15:19:48.375
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-06 15:19:48.387
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-06 15:19:48.398
+!MESSAGE Installedcpp
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-01-06 15:19:53.026
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Ashsp'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:20:59.012
+!MESSAGE Running ant file: C:\Users\Ashsp\Documents\GitHub\roboRIOBaseCode\roboRIOBaseCode\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:20:59.021
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:24:02.843
+!MESSAGE Running ant file: C:\Users\Ashsp\Documents\GitHub\roboRIOBaseCode\roboRIOBaseCode\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:24:02.852
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-06 15:27:06.240
+!MESSAGE Preferences initialized.
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:30:21.133
+!MESSAGE Running ant file: C:\Users\Ashsp\Documents\GitHub\roboRIOBaseCode\roboRIOBaseCode\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:30:21.141
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:31:23.745
+!MESSAGE Running ant file: C:\Users\Ashsp\Documents\GitHub\roboRIOBaseCode\roboRIOBaseCode\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-06 15:31:23.752
+!MESSAGE Targets: deploy, Mode: run
+!SESSION 2016-01-09 15:27:45.699 -----------------------------------------------
+eclipse.buildId=4.5.0.I20150603-2000
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-01-09 15:27:53.499
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2016-01-09 15:27:54.746
+!MESSAGE Unable to load resource file:/C:/Users/Ashsp/Documents/GitHub/roboRIOBaseCode/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.xml.sax.SAXParseExceptionpublicId: file:/C:/Users/Ashsp/Documents/GitHub/roboRIOBaseCode/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; systemId: file:/C:/Users/Ashsp/Documents/GitHub/roboRIOBaseCode/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:406)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.getResource(ResourceHandler.java:351)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadResource(ResourceHandler.java:327)
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:231)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:397)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:254)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:620)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: file:/C:/Users/Ashsp/Documents/GitHub/roboRIOBaseCode/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; systemId: file:/C:/Users/Ashsp/Documents/GitHub/roboRIOBaseCode/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1518)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1297)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 23 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2016-01-09 15:27:54.746
+!MESSAGE The persisted workbench has no top-level windows, so reinitializing with defaults.
+!STACK 0
+java.lang.Exception
+	at org.eclipse.e4.ui.internal.workbench.ResourceHandler.loadMostRecentModel(ResourceHandler.java:236)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.loadApplicationModel(E4Application.java:397)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:254)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:620)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.079
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.123
+!MESSAGE Install necessary for tools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.223
+!MESSAGE 	ZipEntry sfx-2014.11.01/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.237
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.249
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.290
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/bool/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.300
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/bool/.jrubyfx_cache/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.310
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/command/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.322
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/command/.jrubyfx_cache/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.333
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/pid/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.345
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/pid/.jrubyfx_cache/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.387
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/subsystem/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.429
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/subsystem/.jrubyfx_cache/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.441
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/tab-switcher/: 0
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.475
+!MESSAGE 	ZipEntry OutlineViewer.jar: 279565
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.543
+!MESSAGE 	ZipEntry RobotBuilder.jar: 2238543
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.699
+!MESSAGE 	ZipEntry SmartDashboard.jar: 2335321
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:08.928
+!MESSAGE 	ZipEntry java-installer.jar: 2977723
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.251
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/bool/.jrubyfx_cache/774a63170b63edbd5e88db7126df6db9645b436c.rb: 2335
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.271
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/bool/BadBool.fxml: 920
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.288
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/bool/icon.png: 1188
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.303
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/bool/icon.svg: 2314
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.324
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/command/.jrubyfx_cache/ce51af7b129edfccc7586fa5960223cade268b4f.rb: 4722
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.344
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/command/command.fxml: 2608
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.367
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/command/icon.png: 1027
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.382
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/command/icon.svg: 3614
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.418
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/command/media-playback-start.png: 677
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.497
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/command/media-playback-stop.png: 297
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.536
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/manifest.yml: 1277
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.678
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/pid/.jrubyfx_cache/cc169a7ed334897bab8166f0453a93a3f710aa61.rb: 5685
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.707
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/pid/PIDParent.fxml: 2297
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.752
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/pid/pidicon.png: 2184
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.766
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/pid/pidicon.svg: 20932
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.787
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/subsystem/.jrubyfx_cache/c43f0db19d95c1f21829c7e961d536a3fbb293dd.rb: 3121
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.808
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/subsystem/subsystem.fxml: 1408
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.826
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/tab-switcher/icon.png: 1485
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.838
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/tab-switcher/icon.svg: 3897
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:09.869
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/built-in/tab-switcher/tab_switcher.rb: 1768
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-01-09 15:28:09.907
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Ashsp'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:10.012
+!MESSAGE 	ZipEntry sfx-2014.11.01/plugins/livewindowplugin.jar: 234804
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:10.169
+!MESSAGE 	ZipEntry sfx-2014.11.01/sfx.jar: 28036895
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:11.282
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:11.298
+!MESSAGE Installing cpp if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-01-09 15:28:11.343
+!MESSAGE Installedcpp
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-01-09 15:28:11.837
+!MESSAGE Error: Cannot run program "gcc": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "gcc": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-01-09 15:28:12.178
+!MESSAGE Error: Cannot run program "g++": Launching failed
+!STACK 0
+java.io.IOException: Cannot run program "g++": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:349)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:91)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:91)
+	at org.eclipse.cdt.core.CommandLauncher.execute(CommandLauncher.java:194)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:263)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runProgramForLanguage(AbstractBuiltinSpecsDetector.java:759)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForLanguage(AbstractBuiltinSpecsDetector.java:689)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector.runForEachLanguage(AbstractBuiltinSpecsDetector.java:562)
+	at org.eclipse.cdt.managedbuilder.language.settings.providers.AbstractBuiltinSpecsDetector$1.runInWorkspace(AbstractBuiltinSpecsDetector.java:496)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-09 15:40:48.835
+!MESSAGE Running ant file: C:\Users\Ashsp\Documents\GitHub\roboRIOBaseCode\roboRIOBaseCode\build.xml
+
+!ENTRY WPILib_CPP_Robot_Development 1 0 2016-01-09 15:40:48.842
+!MESSAGE Targets: deploy, Mode: run

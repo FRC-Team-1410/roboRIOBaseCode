@@ -6,7 +6,7 @@
 
 class TeleOpTankDrive: public Command {
 private:
-	int number_motors;
+
 public:
 	TeleOpTankDrive();
 	void Initialize();

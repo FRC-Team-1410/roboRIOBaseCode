@@ -4,9 +4,9 @@ Robot Preferences:
 	DriveMultiplier 1 float (anything between 0 and 1)
 	AutoDriveTime 2.0 float (any number)
 	AutoDriveSpeed 0.5 float (anything between 0 and 1)
-	AutoRotate false bool (true or false)
 	AutoDriveAngle 90.0 float (anything between -360 and 360)
 	AutoTurnLeft false bool (true or false)
+	AutoDriveTurn false bool (true or false)
 
 List of Subsystems:
 	Drive Base

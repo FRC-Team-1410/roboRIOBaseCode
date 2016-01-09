@@ -14,15 +14,10 @@ private:
 
 	Gyro * drive_gyro;
 
-	//might not work with CAN
-	RobotDrive * drive;
-
 public:
 	DriveBase();
 	void InitDefaultCommand();
-	void DriveTank(float left_speed, float right_speed, int number_motors);
-	void DriveArcade(float speed, float rotation, int number_motors);
-	void DriveMecanum(float x_speed, float y_speed, float rot_speed);
+	void DriveTank(float left_speed, float right_speed);
 
 	float ReturnEncoderDistance(float e1, float e2, float distance);
 	void ResetEncoderPosition();

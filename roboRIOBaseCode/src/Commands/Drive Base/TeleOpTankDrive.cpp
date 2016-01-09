@@ -4,7 +4,6 @@
 
 TeleOpTankDrive::TeleOpTankDrive(){
 	Requires(Robot::drivebase);
-	number_motors = Robot::oi->prefs->GetInt("NumberMotors", 4);
 }
 
 void TeleOpTankDrive::Initialize(){
@@ -12,7 +11,7 @@ void TeleOpTankDrive::Initialize(){
 }
 
 void TeleOpTankDrive::Execute(){
-	Robot::drivebase->DriveTank(Robot::oi->GetDriveAxis(tankLeftAxis), Robot::oi->GetDriveAxis(tankRightAxis), number_motors);
+	Robot::drivebase->DriveTank(Robot::oi->GetDriveAxis(tankLeftAxis), Robot::oi->GetDriveAxis(tankRightAxis));
 }
 
 bool TeleOpTankDrive::IsFinished(){
@@ -20,7 +19,7 @@ bool TeleOpTankDrive::IsFinished(){
 }
 
 void TeleOpTankDrive::End(){
-	Robot::drivebase->DriveTank(0, 0, number_motors);
+	Robot::drivebase->DriveTank(0, 0);
 }
 
 void TeleOpTankDrive::Interrupted(){

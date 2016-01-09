@@ -1,18 +1,16 @@
 #include "WPILib.h"
 #include "Robot.h"
 
-#include "Commands/Autonomous/Very Simple Auto/VerySimpleAuto.h"
 OI * Robot::oi = NULL;
 DriveBase * Robot::drivebase = NULL;
 
 void Robot::RobotInit(){
 	oi = new OI();
 	drivebase = new DriveBase();
-	
-	lw = LiveWindow::GetInstance();
 
+	lw = LiveWindow::GetInstance();
+	
 	auto_choice = new SendableChooser();
-	auto_choice->AddDefault("Very Simple Auto", new VerySimpleAuto());
 	SmartDashboard::PutData("Autonomous Mode", auto_choice);
 }
 
@@ -36,4 +34,5 @@ void Robot::TeleopPeriodic(){
 void Robot::TestPeriodic(){
 	lw->Run();
 }
+
 START_ROBOT_CLASS(Robot);

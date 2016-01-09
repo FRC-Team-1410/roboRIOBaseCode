@@ -8,9 +8,7 @@ private:
 	Joystick * driver_stick;
 	Joystick * operator_stick;
 
-
 public:
-	Preferences * prefs;
 	OI();
 	double GetDriveAxis(int axis);
 };

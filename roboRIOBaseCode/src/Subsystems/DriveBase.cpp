@@ -1,9 +1,7 @@
 #include "Robot.h"
+#include "../RobotMap.h"
 #include "DriveBase.h"
 #include "Commands/Drive Base/TeleOpTankDrive.h"
-#include "Commands/Drive Base/TeleOpArcadeDrive.h"
-#include "Commands/Drive Base/TeleOpMecanumDrive.h"
-#include "../RobotMap.h"
 
 DriveBase::DriveBase() : Subsystem("DriveBase"){
 	fl_motor = new CANTalon(frontLeftDrive);
@@ -14,72 +12,20 @@ DriveBase::DriveBase() : Subsystem("DriveBase"){
 	mr_motor = new CANTalon(middleRightDrive);
 
 	drive_gyro = new Gyro(0);
-
-	//might not work with CAN
-	drive = new RobotDrive(fl_motor, bl_motor, fr_motor, br_motor);
-
-	drive->SetInvertedMotor(drive->kFrontRightMotor, true);
-	drive->SetInvertedMotor(drive->kRearRightMotor, true);
-
-	drive->SetSafetyEnabled(false);
-	drive->SetSensitivity(0.2);
 }
 
 void DriveBase::InitDefaultCommand(){
-	int drive_mode = Robot::oi->prefs->GetInt("DriveMode", 1);
-	if(drive_mode == 1){
-		SetDefaultCommand(new TeleOpTankDrive());
-	}
-	else if(drive_mode == 2){
-		SetDefaultCommand(new TeleOpArcadeDrive());
-	}
-	else if(drive_mode == 3){
-		SetDefaultCommand(new TeleOpMecanumDrive());
-	}
-	else{
-		SetDefaultCommand(new TeleOpTankDrive());
-	}
+	SetDefaultCommand(new TeleOpTankDrive());
 }
 
-void DriveBase::DriveTank(float left_speed, float right_speed, int number_motors){
-	if(number_motors == 2){
-		fl_motor->Set(left_speed);
-		fr_motor->Set(right_speed);
-	}
-	else if(number_motors == 4){
-		fl_motor->Set(left_speed);
-		fr_motor->Set(right_speed);
-		bl_motor->Set(left_speed);
-		br_motor->Set(right_speed);
-	}
-	else if(number_motors == 6){
-		fl_motor->Set(left_speed);
-		fr_motor->Set(right_speed);
-		bl_motor->Set(left_speed);
-		br_motor->Set(right_speed);
-		ml_motor->Set(left_speed);
-		mr_motor->Set(right_speed);
-	}
-}
+void DriveBase::DriveTank(float left_speed, float right_speed){
 
-void DriveBase::DriveArcade(float speed, float rotation, int number_motors){
-	if(number_motors == 2){
-		//might not work with CAN
-		drive = new RobotDrive(fl_motor, fr_motor);
-
-		drive->SetInvertedMotor(drive->kFrontRightMotor, true);
-
-		drive->SetSafetyEnabled(false);
-		drive->SetSensitivity(0.2);
-	}
-
-	//might not work with CAN
-	drive->ArcadeDrive(speed, rotation);
-}
-
-void DriveBase::DriveMecanum(float x_speed, float y_speed, float rot_speed){
-	//might not work with CAN
-	drive->MecanumDrive_Cartesian(x_speed, y_speed, rot_speed);
+	fl_motor->Set(left_speed);
+	fr_motor->Set(right_speed);
+	bl_motor->Set(left_speed);
+	br_motor->Set(right_speed);
+	//ml_motor->Set(left_speed);
+	//mr_motor->Set(right_speed);
 }
 
 float DriveBase::ReturnEncoderDistance(float e1, float e2, float distance){
